@@ -5,6 +5,10 @@ public class Usuario {
 	private String matricula;
 	private String curso;
 	
+	public Usuario() {
+		
+	}
+	
 	public Usuario(String nome, String matricula, String curso) {
 		this.nome = nome;
 		this.matricula = matricula;
