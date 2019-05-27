@@ -38,6 +38,10 @@ public class Main {
 				usuario.setMatricula(leitor.nextLine());
 				System.out.print("Digite o nome do usuário: ");
 				usuario.setNome(leitor.nextLine());
+				System.out.print("Digite o telefone do usuário: ");
+				usuario.setTelefone(leitor.nextLine());
+				System.out.print("Digite o e-mail do usuário: ");
+				usuario.setEmail(leitor.nextLine());
 				System.out.print("Digite o curso do usuário: ");
 				usuario.setCurso(leitor.nextLine());
 				System.out.println("Usuário cadastrado com sucesso!");
