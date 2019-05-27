@@ -1,20 +1,20 @@
 package controller;
 
+import java.util.ArrayList;
+
 import model.*;
 
 public class Biblioteca {
 	private String nomeFantasia;
 	private String endereco;
 	private Livro[] livros;
-	private Usuario[] usuarios;
+	private ArrayList<Usuario> usuarios;
 	private Reserva[] reservas;
 	
 	
 	
 	public Biblioteca() {
-		livros = new Livro[1];
-		usuarios = new Usuario[1];
-		reservas = new Reserva[1];
+		usuarios = new ArrayList<Usuario>();
 	}
 
 	public String getNomeFantasia() {
