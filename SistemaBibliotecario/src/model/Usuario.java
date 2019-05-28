@@ -7,6 +7,12 @@ public class Usuario {
 	private String email;
 	private String curso;
 	
+	public Usuario(String nome, String matricula, String curso) {
+		this.nome = nome;
+		this.matricula = matricula;
+		this.curso = curso;
+	}
+	
 	public String getMatricula() {
 		return matricula;
 	}
@@ -50,13 +56,9 @@ public class Usuario {
 	public Usuario() {
 		
 	}
-	
-	public Usuario(String nome, String matricula, String curso) {
-		this.nome = nome;
-		this.matricula = matricula;
-		this.curso = curso;
-	}
 
-	
-	
+	@Override
+	public String toString() {
+		return String.format(" • Matrícula: %s\n • Nome: %s\n • Telefone: %s\n • E-mail: %s\n • Curso: %s", getMatricula(), getNome(), getTelefone(), getEmail(), getCurso());
+	}
 }
