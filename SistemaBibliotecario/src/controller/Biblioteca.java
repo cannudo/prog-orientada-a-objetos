@@ -41,10 +41,10 @@ public class Biblioteca {
 		String retorno = "";
 		for (Usuario usuario : usuarios) {
 			retorno += String.format(" • Matrícula: %s\n", usuario.getMatricula());
-			retorno += String.format("     • Nome: %s/n", usuario.getNome());
-			retorno += String.format("     • Telefone: %s/n", usuario.getTelefone());
-			retorno += String.format("     • E-mail: %s/n", usuario.getEmail());
-			retorno += String.format("     • Curso: %s/n", usuario.getCurso());
+			retorno += String.format("     • Nome: %s\n", usuario.getNome());
+			retorno += String.format("     • Telefone: %s\n", usuario.getTelefone());
+			retorno += String.format("     • E-mail: %s\n", usuario.getEmail());
+			retorno += String.format("     • Curso: %s\n", usuario.getCurso());
 		}
 		return retorno;
 	}
