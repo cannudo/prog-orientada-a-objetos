@@ -21,6 +21,7 @@ public class Main {
 			System.out.println("0. Sair");
 			System.out.println("1. Ver dados da biblioteca");
 			System.out.println("2. Adicionar um usuário");
+			System.out.println("3. Listar usuários");
 			System.out.print("Digite um inteiro correspondente a opção --> ");
 			entrada = leitor.nextInt();
 			leitor.nextLine();
@@ -46,6 +47,14 @@ public class Main {
 				usuario.setCurso(leitor.nextLine());
 				biblioteca.adicionarUsuario(usuario);
 				System.out.println("Usuário cadastrado com sucesso!");
+				break;
+			case 3:
+				System.out.println("Você optou por listar usuários cadastrados na biblioteca.\n");
+				if (biblioteca.getQuantidadeDeUsuarios() > 0) {
+					System.out.println(biblioteca.listarUsuarios());;
+				} else {
+					System.out.println("Ainda não há usuários cadastrados.");
+				}
 				break;
 			default:
 				System.out.println("\nOpção inválida.");
