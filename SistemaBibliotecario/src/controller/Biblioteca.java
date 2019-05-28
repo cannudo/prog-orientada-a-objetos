@@ -32,6 +32,18 @@ public class Biblioteca {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+	
+	public String listarUsuarios() {
+		String retorno = "";
+		for (Usuario usuario : usuarios) {
+			retorno += String.format(" • Matrícula: %s\n", usuario.getMatricula());
+			retorno += String.format("     • Nome: %s/n", usuario.getNome());
+			retorno += String.format("     • Telefone: %s/n", usuario.getTelefone());
+			retorno += String.format("     • E-mail: %s/n", usuario.getEmail());
+			retorno += String.format("     • Curso: %s/n", usuario.getCurso());
+		}
+		return retorno;
+	}
 
 	public void adicionarUsuario(Usuario usuario) {
 		usuarios.add(usuario);
