@@ -44,6 +44,7 @@ public class Main {
 				usuario.setEmail(leitor.nextLine());
 				System.out.print("Digite o curso do usuário: ");
 				usuario.setCurso(leitor.nextLine());
+				biblioteca.adicionarUsuario(usuario);
 				System.out.println("Usuário cadastrado com sucesso!");
 				break;
 			default:
