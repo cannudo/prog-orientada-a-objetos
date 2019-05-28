@@ -39,6 +39,6 @@ public class Biblioteca {
 	
 	@Override
 	public String toString() {
-		return String.format(" • Nome fantasia: %s\n • Endereço: %s", getNomeFantasia(), getEndereco());
+		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d", getNomeFantasia(), getEndereco(), usuarios.size());
 	}
 }
