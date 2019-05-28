@@ -33,6 +33,10 @@ public class Biblioteca {
 		this.endereco = endereco;
 	}
 
+	public void adicionarUsuario(Usuario usuario) {
+		usuarios.add(usuario);
+	}
+	
 	@Override
 	public String toString() {
 		return String.format(" • Nome fantasia: %s\n • Endereço: %s", getNomeFantasia(), getEndereco());
