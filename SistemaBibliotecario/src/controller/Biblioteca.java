@@ -33,6 +33,10 @@ public class Biblioteca {
 		this.endereco = endereco;
 	}
 	
+	public int getQuantidadeDeUsuarios() {
+		return usuarios.size();
+	};
+	
 	public String listarUsuarios() {
 		String retorno = "";
 		for (Usuario usuario : usuarios) {
@@ -51,6 +55,6 @@ public class Biblioteca {
 	
 	@Override
 	public String toString() {
-		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d", getNomeFantasia(), getEndereco(), usuarios.size());
+		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d", getNomeFantasia(), getEndereco(), getQuantidadeDeUsuarios());
 	}
 }
