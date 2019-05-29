@@ -7,6 +7,7 @@ import model.Usuario;
 
 public class Main {
 	public static void main(String[] args) {
+		int codigoDoLivro = 0;
 		Scanner leitor = new Scanner(System.in);
 		System.out.println("Para ter acesso aos métodos de uma biblioteca, é preciso cadastrá-la primeiro.");
 		Biblioteca biblioteca = new Biblioteca();
@@ -60,9 +61,12 @@ public class Main {
 				break;
 			case 4:
 				System.out.println("Você optou por adicionar um livro.\n");
-				Livro livro = new Livro();
+				Livro livro = new Livro(codigoDoLivro);
+				codigoDoLivro++;
 				System.out.print("Digite o título do livro: ");
 				livro.setTitulo(leitor.nextLine());
+				System.out.print("Digite o nome do autor do livro: ");
+				livro.setAutor(leitor.nextLine());
 				System.out.print("Entre com a quantidade de exemplares: ");
 				livro.setExemplares(leitor.nextInt());
 				leitor.nextLine();
