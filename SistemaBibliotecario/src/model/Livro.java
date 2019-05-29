@@ -4,6 +4,10 @@ public class Livro {
 	private String titulo;
 	private int exemplares;
 	
+	public Livro() {
+		
+	}
+	
 	public Livro(String titulo, int exemplares) {
 		this.titulo = titulo;
 		this.exemplares = exemplares;
