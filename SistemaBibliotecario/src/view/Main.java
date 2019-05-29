@@ -2,6 +2,7 @@ package view;
 import java.util.Scanner;
 
 import controller.Biblioteca;
+import model.Livro;
 import model.Usuario;
 
 public class Main {
@@ -22,6 +23,7 @@ public class Main {
 			System.out.println("1. Ver dados da biblioteca");
 			System.out.println("2. Adicionar um usuário");
 			System.out.println("3. Listar usuários");
+			System.out.println("4. Adicionar um livro");
 			System.out.print("Digite um inteiro correspondente a opção --> ");
 			entrada = leitor.nextInt();
 			leitor.nextLine();
@@ -55,6 +57,16 @@ public class Main {
 				} else {
 					System.out.println("Ainda não há usuários cadastrados.");
 				}
+				break;
+			case 4:
+				System.out.println("Você optou por adicionar um livro.\n");
+				Livro livro = new Livro();
+				System.out.print("Digite o título do livro: ");
+				livro.setTitulo(leitor.nextLine());
+				System.out.print("Entre com a quantidade de exemplares: ");
+				livro.setExemplares(leitor.nextInt());
+				leitor.nextLine();
+				System.out.println("Livro cadastrado com sucesso!");
 				break;
 			default:
 				System.out.println("\nOpção inválida.");
