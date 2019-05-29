@@ -7,7 +7,7 @@ import model.*;
 public class Biblioteca {
 	private String nomeFantasia;
 	private String endereco;
-	private Livro[] livros;
+	private ArrayList<Livro> livros;
 	private ArrayList<Usuario> usuarios;
 	private Reserva[] reservas;
 	
@@ -15,6 +15,7 @@ public class Biblioteca {
 	
 	public Biblioteca() {
 		usuarios = new ArrayList<Usuario>();
+		livros = new ArrayList<Livro>();
 	}
 
 	public String getNomeFantasia() {
