@@ -6,8 +6,8 @@ public class Livro {
 	private String autor;
 	private int exemplares;
 	
-	public Livro() {
-		
+	public Livro(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public int getCodigo() {
