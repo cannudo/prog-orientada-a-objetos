@@ -1,16 +1,21 @@
 package model;
 
 public class Livro {
+	private int codigo;
 	private String titulo;
+	private String autor;
 	private int exemplares;
 	
 	public Livro() {
 		
 	}
-	
-	public Livro(String titulo, int exemplares) {
-		this.titulo = titulo;
-		this.exemplares = exemplares;
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getTitulo() {
@@ -19,6 +24,14 @@ public class Livro {
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	public int getExemplares() {
