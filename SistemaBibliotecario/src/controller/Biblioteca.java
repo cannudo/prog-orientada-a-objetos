@@ -50,6 +50,17 @@ public class Biblioteca {
 		return retorno;
 	}
 
+	public String listarLivros() {
+		String retorno = "";
+		for (Livro livro : livros) {
+			retorno += String.format(" • Código: %d\n", livro.getCodigo());
+			retorno += String.format("     • Título: %s\n", livro.getTitulo());
+			retorno += String.format("     • Autor: %s\n", livro.getAutor());
+			retorno += String.format("     • Exemplares: %d\n", livro.getExemplares());
+		}
+		return retorno;
+	}
+	
 	public void adicionarUsuario(Usuario usuario) {
 		usuarios.add(usuario);
 	}
