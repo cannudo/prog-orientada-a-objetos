@@ -16,15 +16,15 @@ public class Biblioteca {
 	public Biblioteca() {
 		usuarios = new ArrayList<Usuario>();
 		livros = new ArrayList<Livro>();
-	}
+	};
 
 	public String getNomeFantasia() {
 		return nomeFantasia;
-	}
+	};
 
 	public void setNomeFantasia(String nomeFantasia) {
 		this.nomeFantasia = nomeFantasia;
-	}
+	};
 
 	public String getEndereco() {
 		return endereco;
@@ -38,6 +38,10 @@ public class Biblioteca {
 		return usuarios.size();
 	};
 	
+	public int getQuantidadeDeLivros() {
+		return livros.size();
+	};
+	
 	public String listarUsuarios() {
 		String retorno = "";
 		for (Usuario usuario : usuarios) {
@@ -48,7 +52,7 @@ public class Biblioteca {
 			retorno += String.format("     • Curso: %s\n", usuario.getCurso());
 		}
 		return retorno;
-	}
+	};
 
 	public String listarLivros() {
 		String retorno = "";
@@ -59,14 +63,14 @@ public class Biblioteca {
 			retorno += String.format("     • Exemplares: %d\n", livro.getExemplares());
 		}
 		return retorno;
-	}
+	};
 	
 	public void adicionarUsuario(Usuario usuario) {
 		usuarios.add(usuario);
-	}
+	};
 	
 	@Override
 	public String toString() {
 		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d", getNomeFantasia(), getEndereco(), getQuantidadeDeUsuarios());
-	}
+	};
 }
