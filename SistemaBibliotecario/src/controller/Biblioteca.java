@@ -69,6 +69,10 @@ public class Biblioteca {
 		usuarios.add(usuario);
 	};
 	
+	public void adicionarLivro(Livro livro) {
+		livros.add(livro);
+	};
+	
 	@Override
 	public String toString() {
 		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d", getNomeFantasia(), getEndereco(), getQuantidadeDeUsuarios());
