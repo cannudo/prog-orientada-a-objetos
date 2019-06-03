@@ -71,6 +71,7 @@ public class Main {
 				livro.setExemplares(leitor.nextInt());
 				leitor.nextLine();
 				System.out.println("Livro cadastrado com sucesso!");
+				biblioteca.adicionarLivro(livro);
 				break;
 			default:
 				System.out.println("\nOpção inválida.");
