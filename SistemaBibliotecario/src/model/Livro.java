@@ -4,10 +4,11 @@ public class Livro {
 	private int codigo;
 	private String titulo;
 	private String autor;
-	private int exemplares;
+	boolean emprestado;
 	
 	public Livro(int codigo) {
 		this.codigo = codigo;
+		emprestado = false;
 	}
 
 	public int getCodigo() {
@@ -33,12 +34,12 @@ public class Livro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-
-	public int getExemplares() {
-		return exemplares;
+	
+	public boolean getEmprestado() {
+		return emprestado;
 	}
 
-	public void setExemplares(int exemplares) {
-		this.exemplares = exemplares;
+	public void setEmprestado(boolean emprestado) {
+		this.emprestado = emprestado;
 	}
 }
