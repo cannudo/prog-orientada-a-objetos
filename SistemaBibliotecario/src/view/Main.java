@@ -34,7 +34,7 @@ public class Main {
 				break;
 			case 1:
 				System.out.println("Você optou por ver dados da biblioteca");
-				System.out.println("\n" + biblioteca.toString());
+				System.out.print("\n" + biblioteca.toString());
 				break;
 			case 2:
 				System.out.println("Você optou por adicionar um usuário\n");
@@ -68,16 +68,13 @@ public class Main {
 				livro.setTitulo(leitor.nextLine());
 				System.out.print("Digite o nome do autor do livro: ");
 				livro.setAutor(leitor.nextLine());
-				System.out.print("Entre com a quantidade de exemplares: ");
-				livro.setExemplares(leitor.nextInt());
-				leitor.nextLine();
 				System.out.println("Livro cadastrado com sucesso!");
 				biblioteca.adicionarLivro(livro);
 				break;
 			case 5:
 				System.out.println("Você optou por listar os livros cadastrados na biblioteca.\n");
 				if (biblioteca.getQuantidadeDeLivros() > 0) {
-					System.out.println(biblioteca.listarLivros());
+					System.out.print(biblioteca.listarLivros());
 				} else {
 					System.out.println("Ainda não há livros cadastrados.");
 				}
