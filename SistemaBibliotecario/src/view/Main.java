@@ -25,6 +25,7 @@ public class Main {
 			System.out.println("2. Adicionar um usuário");
 			System.out.println("3. Listar usuários");
 			System.out.println("4. Adicionar um livro");
+			System.out.println("5. Listar livros");
 			System.out.print("Digite um inteiro correspondente a opção --> ");
 			entrada = leitor.nextInt();
 			leitor.nextLine();
@@ -72,6 +73,14 @@ public class Main {
 				leitor.nextLine();
 				System.out.println("Livro cadastrado com sucesso!");
 				biblioteca.adicionarLivro(livro);
+				break;
+			case 5:
+				System.out.println("Você optou por listar os livros cadastrados na biblioteca.\n");
+				if (biblioteca.getQuantidadeDeLivros() > 0) {
+					System.out.println(biblioteca.listarLivros());
+				} else {
+					System.out.println("Ainda não há livros cadastrados.");
+				}
 				break;
 			default:
 				System.out.println("\nOpção inválida.");
