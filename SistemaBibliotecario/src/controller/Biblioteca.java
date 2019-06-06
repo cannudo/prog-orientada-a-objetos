@@ -9,13 +9,12 @@ public class Biblioteca {
 	private String endereco;
 	private ArrayList<Livro> livros;
 	private ArrayList<Usuario> usuarios;
-	private Reserva[] reservas;
-	
-	
+	private ArrayList<Reserva> reserva;
 	
 	public Biblioteca() {
 		usuarios = new ArrayList<Usuario>();
 		livros = new ArrayList<Livro>();
+		reserva = new ArrayList<Reserva>();
 	};
 
 	public String getNomeFantasia() {
