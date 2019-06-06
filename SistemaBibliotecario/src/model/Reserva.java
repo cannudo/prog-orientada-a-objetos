@@ -16,11 +16,4 @@ public class Reserva {
 	public void setLivro(Livro livro) {
 		this.livro = livro;
 	}
-	public String getDevolucao() {
-		return devolucao;
-	}
-	public void setDevolucao(String devolucao) {
-		this.devolucao = devolucao;
-	}
-	
 }
