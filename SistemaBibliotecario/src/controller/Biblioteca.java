@@ -56,10 +56,16 @@ public class Biblioteca {
 	public String listarLivros() {
 		String retorno = "";
 		for (Livro livro : livros) {
+			String emprestado;
+			if (livro.getEmprestado()) {
+				emprestado = "sim";
+			} else {
+				emprestado = "não";
+			}
 			retorno += String.format(" • Código: %d\n", livro.getCodigo());
 			retorno += String.format("     • Título: %s\n", livro.getTitulo());
 			retorno += String.format("     • Autor: %s\n", livro.getAutor());
-			retorno += String.format("     • Exemplares: %d\n", livro.getExemplares());
+			retorno += String.format("     • Emprestado: %s\n", emprestado);
 		}
 		return retorno;
 	};
