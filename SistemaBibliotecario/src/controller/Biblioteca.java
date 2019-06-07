@@ -15,15 +15,15 @@ public class Biblioteca {
 		usuarios = new ArrayList<Usuario>();
 		livros = new ArrayList<Livro>();
 		reserva = new ArrayList<Reserva>();
-	};
+	}
 
 	public String getNomeFantasia() {
 		return nomeFantasia;
-	};
+	}
 
 	public void setNomeFantasia(String nomeFantasia) {
 		this.nomeFantasia = nomeFantasia;
-	};
+	}
 
 	public String getEndereco() {
 		return endereco;
@@ -33,13 +33,17 @@ public class Biblioteca {
 		this.endereco = endereco;
 	}
 	
+	public ArrayList<Livro> getLivros() {
+		return livros;
+	}
+	
 	public int getQuantidadeDeUsuarios() {
 		return usuarios.size();
-	};
+	}
 	
 	public int getQuantidadeDeLivros() {
 		return livros.size();
-	};
+	}
 	
 	public String listarUsuarios() {
 		String retorno = "";
@@ -51,7 +55,7 @@ public class Biblioteca {
 			retorno += String.format("     • Curso: %s\n", usuario.getCurso());
 		}
 		return retorno;
-	};
+	}
 
 	public String listarLivros() {
 		String retorno = "";
@@ -68,18 +72,26 @@ public class Biblioteca {
 			retorno += String.format("     • Emprestado: %s\n", emprestado);
 		}
 		return retorno;
-	};
+	}
 	
 	public void adicionarUsuario(Usuario usuario) {
 		usuarios.add(usuario);
-	};
+	}
 	
 	public void adicionarLivro(Livro livro) {
 		livros.add(livro);
-	};
+	}
+	
+	public void emprestar() {
+		if (getQuantidadeDeUsuarios() == 0 || getQuantidadeDeLivros() == 0) {
+			System.out.println("Para o empréstimo é preciso, ao menos, um usuário e um livro. Tente cadastrá-los primeiro.");
+		} else {
+			System.out.println("Há usuários e livros aqui.");
+		}
+	}
 	
 	@Override
 	public String toString() {
 		return String.format(" • Nome fantasia: %s\n • Endereço: %s\n • Quantidade de usuários: %d\n • Quantidade de livros: %d", getNomeFantasia(), getEndereco(), getQuantidadeDeUsuarios(), getQuantidadeDeLivros());
-	};
+	}
 }
