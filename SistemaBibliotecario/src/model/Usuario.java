@@ -1,16 +1,20 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Usuario {
 	private String matricula;
 	private String nome;
 	private String telefone;
 	private String email;
 	private String curso;
+	private ArrayList<Livro> livros;
 	
 	public Usuario(String nome, String matricula, String curso) {
 		this.nome = nome;
 		this.matricula = matricula;
 		this.curso = curso;
+		livros = new ArrayList<Livro>();
 	}
 	
 	public String getMatricula() {
