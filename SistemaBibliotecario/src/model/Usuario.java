@@ -57,6 +57,10 @@ public class Usuario {
 		this.curso = curso;
 	}
 	
+	public void adicionarLivro(Livro livro) {
+		livros.add(livro);
+	}
+	
 	public Usuario() {
 		
 	}
