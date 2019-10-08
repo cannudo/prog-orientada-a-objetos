@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 		int codigoDoLivro = 0;
 		Scanner leitor = new Scanner(System.in);
-		System.out.println("Para ter acesso aos métodos de uma biblioteca, é preciso cadastrá-la primeiro.");
+		System.out.println("Necessita de permissão, para ter acesso aos métodos de uma biblioteca.");
 		Biblioteca biblioteca = new Biblioteca();
 		System.out.println("Qual será o nome fantasia da biblioteca?");
 		biblioteca.setNomeFantasia(leitor.nextLine());
